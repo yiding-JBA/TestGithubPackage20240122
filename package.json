@@ -1,0 +1,12 @@
+{
+  "name": "com.skillsvr.githubpkg.testpackage20240122",
+  "version": "1.0.0",
+  "description": "test package for github package and unity registery",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "skillsvr",
+  "license": "ISC",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@yiding-JBA" }
+}
