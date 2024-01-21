@@ -1,6 +1,6 @@
 {
   "name": "com.skillsvr.githubpkg.testpackage20240122",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "test package for github package and unity registery",
   "main": "index.js",
   "scripts": {
