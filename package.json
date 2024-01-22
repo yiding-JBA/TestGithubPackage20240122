@@ -1,12 +1,18 @@
 {
   "name": "com.skillsvr.githubpkg.testpackage20240122",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "test package for github package and unity registery",
   "main": "index.js",
+  "keywords": [ "key X", "key Y", "key Z" ],
   "scripts": {
     "test": "exit 0"
   },
-  "author": "skillsvr",
+  "repository": { "type": "git", "url": "git@github.com:yiding-JBA/TestGithubPackage20240122.git", "directory": " com.skillsvr.githubpkg.testpackage20240122" },
+  "unity": "2019.4",
+  "category": "skillsvr", 
+  "author": { "name": "skillsvr", "email": "info@skillsvr.com", "url": "skillsvr.com" },
   "license": "ISC",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/@yiding-JBA" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@yiding-JBA"
+  }
 }
