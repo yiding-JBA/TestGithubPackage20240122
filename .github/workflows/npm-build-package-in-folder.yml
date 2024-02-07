@@ -20,8 +20,12 @@ jobs:
           node-version: 16
       - name: ${{ github.event.inputs.packageDir }}
         working-directory: ${{ github.event.inputs.packageDir }}
-        run: npm ci
+        run: |
+          npm install
+          npm run build
+          npm ci
       - run: npm test
+        working-directory: ${{ github.event.inputs.packageDir }}
 
   publish-gpr:
     needs: build
@@ -37,7 +41,11 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: ${{ github.event.inputs.packageDir }}
         working-directory: ${{ github.event.inputs.packageDir }}
-        run: npm ci
+        run: |
+          npm install
+          npm run build
+          npm ci
       - run: npm publish
+        working-directory: ${{ github.event.inputs.packageDir }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
