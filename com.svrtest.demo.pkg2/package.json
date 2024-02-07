@@ -1,0 +1,17 @@
+{
+  "name": "com.svrtest.demo.pkg2",
+  "version": "1.0.2",
+  "description": "test2",
+  "keywords": [ "key X", "key Y", "key Z" ],
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": { "type": "git", "url": "git@github.com:yiding-JBA/TestGithubPackage20240122.git?path=/com.svrtest.demo.pkg2"},
+  "unity": "2019.4",
+  "category": "skillsvr", 
+  "author": { "name": "skillsvr", "email": "info@skillsvr.com", "url": "skillsvr.com" },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@yiding-JBA"
+  }
+}
