@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-        working-directory: com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
       - run: npm ci
-        working-directory: com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
       - run: npm test
-        working-directory: com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
 
   publish-gpr:
     needs: build
@@ -38,12 +38,12 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm install
-        working-directory: ./com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
       - run: npm ci
-        working-directory: ./com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
       - run: npm test
-        working-directory: ./com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
       - run: npm publish
-        working-directory: ./com.svrtest.demo.pkg2
+        working-directory: ${{ github.event.inputs.packagePath }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
