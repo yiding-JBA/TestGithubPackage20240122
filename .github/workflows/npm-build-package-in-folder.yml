@@ -21,9 +21,9 @@ jobs:
       - run: npm install
         working-directory: com.svrtest.demo.pkg2
       - run: npm ci
-        working-directory: ./com.svrtest.demo.pkg2
+        working-directory: com.svrtest.demo.pkg2
       - run: npm test
-        working-directory: TestGithubPackage20240122\com.svrtest.demo.pkg2
+        working-directory: com.svrtest.demo.pkg2
 
   publish-gpr:
     needs: build
